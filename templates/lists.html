@@ -22,14 +22,19 @@
         <p>Random Numbers : {{ rrr }}</p>
         <p>user_list: {{ user_list }}</p>
 
-        {% for dict_item in user_list %}
-            {% for key, value in dict_item.items() %}
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            <tr>
+                {% for dict_item in user_list %} {% for key, value in
+                dict_item.items() %}
 
-                <h3>Key: {{key}}</h3>
-                <h4>Value: {{value}}</h4>
-
-            {% endfor %}
-        {% endfor %}
-
+                <td>Key: {{key}}</td>
+                <td>Value: {{value}}</td>
+            </tr>
+            {% endfor %} {% endfor %}
+        </table>
     </body>
 </html>
