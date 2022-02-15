@@ -17,6 +17,9 @@ def render_lists():
         {'first_name': 'Mark', 'last_name': 'Guillen'},
         {'first_name': 'KB', 'last_name': 'Tonel'}
     ]
+
+    # create full names
+    
     return render_template("lists.html", user_list=users)
 
 
