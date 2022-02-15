@@ -29,17 +29,13 @@
                 <th>Full Name</th>
             </tr>
 
-            {% for dict_item in user_list %}
+            {% for i in user_list %}
             <tr>
-                {% for key, value in dict_item.items() %}
+                {% for j, value in i.items() %}
+                    <td>{{value}}</td>
+                {% endfor %}
 
-                <!-- <td>Key: {{key}}</td> -->
-                <td>{{value}}</td>
-
-                {% endfor %} 
-
-                <td>{{user_list[1].first_name}}, {{user_list[1].last_name}}</td>
-               
+                <td>{{i["first_name"]}}, {{i["last_name"]}}</td>
             </tr>
             {% endfor %}
         </table>
