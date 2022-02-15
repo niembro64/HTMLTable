@@ -27,14 +27,17 @@
                 <th>First Name</th>
                 <th>Last Name</th>
             </tr>
-            <tr>
-                {% for dict_item in user_list %} {% for key, value in
-                dict_item.items() %}
 
-                <td>Key: {{key}}</td>
-                <td>Value: {{value}}</td>
+            {% for dict_item in user_list %}
+            <tr>
+                {% for key, value in dict_item.items() %}
+
+                <!-- <td>Key: {{key}}</td> -->
+                <td>{{value}}</td>
+
+                {% endfor %}
             </tr>
-            {% endfor %} {% endfor %}
+            {% endfor %}
         </table>
     </body>
 </html>
