@@ -17,7 +17,7 @@ def render_lists():
         {'first_name': 'Mark', 'last_name': 'Guillen'},
         {'first_name': 'KB', 'last_name': 'Tonel'}
     ]
-    return render_template("lists.html", random_numbers=[3, 1, 5], students=users)
+    return render_template("lists.html", rrr=[3, 1, 5], user_list=users)
 
 
 @app.route('/<row>/<col>/<color1>/<color2>')

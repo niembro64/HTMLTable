@@ -18,12 +18,18 @@
         <!-- <img src="{{ url_for('static', filename='img.jpg') }}"> -->
     </head>
     <body>
-        <h1>Checker Board</h1>
-        <h2>ADD TO URL ~/ROWS/COLUMNS/COLOR1/COLOR2</h2>
-        <p>Random Numbers : {{ random_numbers }}</p>
-        <p>Students: {{ students }}</p>
-        <p>First Color: {{ Rcolor1 }}</p>
-        <p>Second Color: {{ Rcolor2 }}</p>
+        <h1>Users List</h1>
+        <p>Random Numbers : {{ rrr }}</p>
+        <p>user_list: {{ user_list }}</p>
+
+        {% for dict_item in user_list %}
+            {% for key, value in dict_item.items() %}
+
+                <h3>Key: {{key}}</h3>
+                <h4>Value: {{value}}</h4>
+
+            {% endfor %}
+        {% endfor %}
 
     </body>
 </html>
